@@ -2,13 +2,13 @@
 // UserName Here: Fixie-Reply-Bot
 
 // require_once 'twitteroauth/twitteroauth/twitteroauth.php';
-require_once('../twitteroauth/twitteroauth-image/twitteroauth.php');
-include '../tweeter/users/pablowright.php';
+require_once('path/to/twitteroauth.php');
+include 'path/to/user.php';
 
 // date_default_timezone_set('America/New_York');
 // $tweetContentDate = date('m/d/Y h:i:s a', time());
 
-// ======================= Extra randomization on file: shuffle it. =========================
+// ======================= Extra randomization on tweet file: shuffle it. =========================
 
 ini_set('memory_limit', '2048M');
 
@@ -47,6 +47,7 @@ function gettxt($lines)
  
  $connection = new TwitterOAuth ($consumer_key, $consumer_secret, $access_key, $access_secret );
 
+//  ======Set up search function ============
  
 function search(array $query)
     {
@@ -80,8 +81,10 @@ foreach ($results->statuses as $result) {
    echo $reply  . "\n";
    $tweetID = $result->id_str;
    echo "<br>";
-   echo $tweetID;
+//   echo $tweetID;
 
+// =========== Tweet your reply ============
+ 
    $response = $connection->post('statuses/update' , array('status' => $reply ));
 }
 }
