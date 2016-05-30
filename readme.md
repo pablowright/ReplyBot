@@ -15,5 +15,9 @@ Twitter Bot Written in php.
     If you are only using one Twitter account, you can put your credentials in ReplyBot.php 
     file directly. Else modify the 'user.php'  file with your twitter tokens. 
     You of course, need a Twitter app. There are tutorials EVERYWHERE on setting this up.
+    
+    05-28-2016: Nothing too fancy here; simple and tweets from text files.
+    For a little more "on-target" Twitter replies, check out the Tweeter-Collector. It allows for a 
+    little more granular replies if you tweet on multiple subjects or have multiple twitter accounts. 
 
 
